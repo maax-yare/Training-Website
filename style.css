@@ -921,10 +921,76 @@ footer{
   color: #ed563b;
 }
 
-@media (max-width:896px) {
+@media (max-width:425px) {
 
   html,body{
     overflow-x: hidden;
+}
+
+
+
+}
+
+
+@media (max-width:768px) {
+
+  html,body{
+    overflow-x: hidden;
+}
+
+.hamburger i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: white;
+  width: 50px;
+  height: 6.25rem;
+  top: 5%;
+  right: 5%;
+  font-size: 1.8rem;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: calc(10rem - 5rem);
+  margin-right: 395px;
+  width: 100%;
+  box-shadow: 10px 5px 10px 5px rgba(136, 136, 136, 0.3);
+  background-color: #ffffff;
+  z-index: 1;
+  color: black;
+  transform: translateX(0%);
+  transition: transform 350ms ease-in-out;
+}
+
+.main-nav ul li a {
+  color: black;
+  margin-bottom: 0.6125rem;
+}
+
+.main-nav ul li a:hover {
+  background-color: #ed563b;
+  color: #ffffff !important;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.main-nav ul[data-visible="false"] {
+  display: none;
+  transform: translateY(100%);
+}
+
+.hamburger i[data-visible="true"] {
+  display: block;
+}
+
+.hamburger i[data-visible="false"] {
+  display: none;
 }
 
   .main-nav .logo{
@@ -1047,12 +1113,14 @@ footer{
   #our-classes .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: -2rem;
   }
 
   #tabs{
     display: flex;
     flex-direction: column;
+    align-items: center;
     
   }
 
@@ -1061,7 +1129,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: -380px;
+    margin-left: -26%;
   }
 
   .section .container .ui-tabs .right {
@@ -1107,22 +1175,32 @@ footer{
 
   #map-and-form {
     width: 100%;
-    height: 68.8125rem;
+    /* height: 68.8125rem; */
     /* background-color: #ed563b; */
     /* margin-bottom: 6rem; */
     margin-top: -10rem;
-    margin-bottom: -11rem;
+    /* margin-bottom: -11rem; */
   }
 
   #map-and-form .container-fluid .map iframe {
-   width: 25.875rem;
+   width: 48rem;
+   /* margin-bottom: 1rem; */
   }
 
   .contact-us{
-    width: 25.875rem;
+    width: 48rem;
     padding: 1.5rem;
+    margin-top: 3.8rem;
     /* display: none; */
   }
+
+  .contact-us .content {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 0.3125rem;
+    
+  }
+  
 
   .container-fluid{
     margin-top: 20rem;
@@ -1157,14 +1235,18 @@ footer{
     display: block;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0rem;
+    margin-top: -2rem;
+  }
+
+  .footer-container{
+    margin-top: 23rem;
   }
 }
 
 
 
 
-@media (max-width: 1063px) { 
+@media (max-width: 1024px) { 
 
   html,body{
     overflow-x: hidden;
@@ -1195,8 +1277,8 @@ footer{
     align-items: center;
     position: absolute;
     color: white;
-    width: 50px;
-    height: 100px;
+    width: 3.125rem;
+    height: 6.25rem;
     top: 5%;
     right: 5%;
     font-size: 1.8rem;
@@ -1209,8 +1291,8 @@ footer{
     align-items: center;
     position: fixed;
     top: calc(10rem - 5rem);
-    margin-right: 395px;
-    width: 45%;
+    margin-right: 80px;
+    width: 80%;
     box-shadow: 10px 5px 10px 5px rgba(136, 136, 136, 0.3);
     background-color: #ffffff;
     z-index: 1;
@@ -1228,7 +1310,7 @@ footer{
     background-color: #ed563b;
     color: #ffffff !important;
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 0.5rem;
   }
 
   .main-nav ul[data-visible="false"] {
